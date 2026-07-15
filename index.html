@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Arshi</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#ff4e9b,#ff758c,#6a5acd,#00c6ff);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:700px;
+padding:30px;
+border-radius:25px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+box-shadow:0 0 35px rgba(255,255,255,.35);
+text-align:center;
+color:white;
+z-index:10;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+
+h1{
+font-size:42px;
+margin-bottom:20px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.05);}
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+}
+
+.balloon{
+position:absolute;
+bottom:-120px;
+width:55px;
+height:75px;
+border-radius:50%;
+animation:float linear infinite;
+}
+
+.balloon:after{
+content:"";
+position:absolute;
+width:2px;
+height:70px;
+background:#fff;
+left:50%;
+top:75px;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-130vh);}
+}
+
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:25px;
+animation:heart 8s linear infinite;
+}
+
+@keyframes heart{
+from{transform:translateY(100vh);}
+to{transform:translateY(-120vh);}
+}
+
+.confetti{
+position:absolute;
+width:8px;
+height:8px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-100vh) rotate(0);}
+to{transform:translateY(120vh) rotate(720deg);}
+}
+
+.star{
+position:absolute;
+color:white;
+animation:blink 2s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+footer{
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎉 Happy Birthday Arshi 🎉</h1>
+
+<p>
+
+Happy Birthday! 🎉<br><br>
+
+May Allah bless you with good health, endless happiness, strong faith, and success in this life and the Hereafter.
+
+May He accept your duas, forgive your sins, and fill your heart with peace and barakah.
+
+<b>Ameen 🤲</b>
+
+<br><br>
+
+Have a beautiful year ahead! 
+
+</p>
+
+<footer>
+<br>
+— Ashu
+</footer>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+let colors=["red","blue","yellow","green","orange","pink","purple","cyan"];
+
+for(let i=0;i<35;i++){
+let b=document.createElement("div");
+b.className="balloon";
+b.style.left=Math.random()*100+"vw";
+b.style.background=colors[Math.floor(Math.random()*colors.length)];
+b.style.animationDuration=(6+Math.random()*6)+"s";
+document.body.appendChild(b);
+}
+
+for(let i=0;i<80;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(6+Math.random()*8)+"s";
+h.style.fontSize=(15+Math.random()*20)+"px";
+document.body.appendChild(h);
+}
+
+for(let i=0;i<180;i++){
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"vw";
+c.style.background=colors[Math.floor(Math.random()*colors.length)];
+c.style.animationDuration=(3+Math.random()*4)+"s";
+document.body.appendChild(c);
+}
+
+for(let i=0;i<40;i++){
+let s=document.createElement("div");
+s.className="star";
+s.innerHTML="✨";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+s.style.fontSize=(12+Math.random()*18)+"px";
+document.body.appendChild(s);
+}
+
+</script>
+
+</body>
+</html>
